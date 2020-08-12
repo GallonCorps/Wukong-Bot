@@ -1,0 +1,22 @@
+{
+  "name": "wukong-bot",
+  "version": "1.0.0",
+  "description": "Wukong Discord Bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GallonCorps/Wukong-Bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GallonCorps/Wukong-Bot/issues"
+  },
+  "homepage": "https://github.com/GallonCorps/Wukong-Bot#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}

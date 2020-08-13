@@ -1,14 +1,19 @@
-const Discord = require('discord.js');
+import Discord from 'discord.js'
+import dotenv from 'dotenv'
+import {commandHandler} from './commandHandling.js'
+
 const client = new Discord.Client();
-require('dotenv').config()
+dotenv.config()
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', msg => {
-  if (msg.content == 'ping') {
-    msg.reply('pong');
+  if(msg.content.startsWith('!')){
+    const command = msg.content.split(' ')[0].slice(1)
+    const argumentos = msg.content.split(' ').slice(1)
+    commandHandler(command, argumentos, msg)
   }
 });
 

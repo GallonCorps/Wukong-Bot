@@ -22,7 +22,10 @@ client.on("message", (msg) => {
         });
         break;
       case "sum":
-        const number = Number(args[0]) + Number(args[1]);
+        var number = 0;
+        args.forEach((arg) => {
+          number = number + Number(arg);
+        });
         if (isNaN(number)) {
           msg.channel.send("alguma coisa ai não é número burro");
         } else {

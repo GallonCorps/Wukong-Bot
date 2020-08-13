@@ -1,6 +1,7 @@
-const Discord = require('discord.js');
-const client = new Discord.Client();
-require('dotenv').config()
+import { Client } from 'discord.js';
+import {} from 'dotenv/config.js';
+
+const client = new Client();
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
